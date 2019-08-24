@@ -26,7 +26,7 @@ $('#submit').on('click', function () {
     }).then(function (data) {
         for (let i = 0; i < responseLimit; i++) {
             $('#updates').append(`<div id='segment'></div>`);
-            $('#segment').append(`<h3>${i + 1} ${data.response.docs[i].headline.main}</h3>`);
+            $('#segment').append(`<h3><a href="${data.response.docs[i].web_url}" target="_blank">${i + 1} ${data.response.docs[i].headline.main}</a></h3>`);
             $('#segment').append(`<h5>${data.response.docs[i].byline.original}</h5>`);
         }
     })
