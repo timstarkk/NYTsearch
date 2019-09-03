@@ -1,5 +1,14 @@
+#headerRow {
+  background: #2b2a28;
+  margin-bottom: 20px;
+}
+
 #header {
-    height: 200px;
+  height: 90px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {

@@ -24,6 +24,7 @@ $('#submit').on('click', function () {
         url: "https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=" + term + startYear + endYear + "&api-key=iUcIo2Jtk7gGtSA19GxAKA6MpKidMzD7",
         method: "GET"
     }).then(function (data) {
+        console.log(data);
         for (let i = 0; i < responseLimit; i++) {
             $('#updates').append(`<div id='segment'></div>`);
             $('#segment').append(`<h3><a href="${data.response.docs[i].web_url}" target="_blank">${i + 1} ${data.response.docs[i].headline.main}</a></h3>`);
